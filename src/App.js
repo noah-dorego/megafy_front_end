@@ -1,6 +1,9 @@
 // components + pages
 import Appbar from './components/appbar/Appbar';
 import Home from './pages/home/Home';
+import Upload from './pages/upload/Upload';
+import Edit from './pages/presets_edit/Edit';
+import Download from './pages/download/Download';
 
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
@@ -34,15 +37,9 @@ function App() {
           <Appbar/>
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/upload">
-
-            </Route>
-            <Route path="/edit">
-
-            </Route>
-            <Route path="/download">
-
-            </Route>
+            <Route path="/upload" element={<Upload />} />
+            <Route path="/edit" element={<Edit />} />
+            <Route path="/download" element={<Download />} />
           </Routes>
         </ThemeProvider>
       
