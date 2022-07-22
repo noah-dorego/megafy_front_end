@@ -13,14 +13,14 @@ import background from "../../images/megafy_background1.png"
 
 import styles from './styles';
 
-import { useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 function Home() {
   const classes = styles;
-  let history = useHistory();
+  let navigate = useNavigate();
 
   const nextPage = () => {
-    history.push("/upload");
+    navigate("/upload");
   }
 
   return (
@@ -64,7 +64,9 @@ function Home() {
           </Box>
         </Container>
 
-        <ArrowForwardIosRoundedIcon sx={classes.next} onClick={nextPage()}></ArrowForwardIosRoundedIcon>
+        <div onClick={nextPage}>
+          <ArrowForwardIosRoundedIcon sx={classes.next} ></ArrowForwardIosRoundedIcon>
+        </div>
         
       </Box>
 
