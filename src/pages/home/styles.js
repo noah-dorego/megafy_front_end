@@ -102,11 +102,18 @@ const styles = {
     },
     next: {
         position: "fixed",
-        bottom: "50vh",
+        bottom: "49vh",
         right: "5vw",
         height: "3vw",
         width: "3vw",
-    }
+    },
+    nextTooltip: {
+        position: "fixed",
+        bottom: "48.2vh",
+        right: "4.7vw",
+        height: "4vw",
+        width: "4vw",
+    },
 };
 
 export default styles;

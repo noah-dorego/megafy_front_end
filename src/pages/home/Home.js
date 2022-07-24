@@ -2,7 +2,10 @@ import * as React from 'react';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Paper from '@mui/material/Paper';
-import { Container, Typography } from '@mui/material';
+import Container from '@mui/material/Container';
+import Typography from '@mui/material/Typography';
+import IconButton from '@mui/material/IconButton';
+import Tooltip from '@mui/material/Tooltip';
 
 import ArrowForwardIosRoundedIcon from '@mui/icons-material/ArrowForwardIosRounded';
 import FileUploadRoundedIcon from '@mui/icons-material/FileUploadRounded';
@@ -27,19 +30,19 @@ function Home() {
     <div style={{ backgroundImage: `url(${background})`, overflow: "hidden" }}>
       <Box sx={classes.mainBox}>
         <Container sx={classes.buttonContainer}>
-          <Box sx={classes.uploadButton} >
+          <Box sx={classes.disabledButton} >
             <FileUploadRoundedIcon sx={classes.pageIcon}></FileUploadRoundedIcon>
           </Box>
           <Box sx={classes.disabledButton} >
             <TuneRoundedIcon sx={classes.pageIcon}></TuneRoundedIcon>
-          </Box> 
+          </Box>
           <Box sx={classes.disabledButton} >
             <DownloadRoundedIcon sx={classes.pageIcon}></DownloadRoundedIcon>
           </Box>
         </Container>
-        
+
         <Typography variant="h4" sx={classes.title}>Welcome to MEGAFY</Typography>
-        
+
         <Container sx={classes.barContainer}>
           <Box>
             <Box sx={classes.textHoversBox}>
@@ -64,10 +67,12 @@ function Home() {
           </Box>
         </Container>
 
-        <div onClick={nextPage}>
-          <ArrowForwardIosRoundedIcon sx={classes.next} ></ArrowForwardIosRoundedIcon>
-        </div>
-        
+        <Tooltip title="Next Page" sx={classes.nextTooltip} arrow>
+          <IconButton onClick={nextPage} color="default">
+            <ArrowForwardIosRoundedIcon sx={classes.next} ></ArrowForwardIosRoundedIcon>
+          </IconButton>
+        </Tooltip>
+
       </Box>
 
     </div>

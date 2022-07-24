@@ -2,8 +2,10 @@ import * as React from 'react';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Paper from '@mui/material/Paper';
+import IconButton from '@mui/material/IconButton';
 
 import ArrowForwardIosRoundedIcon from '@mui/icons-material/ArrowForwardIosRounded';
+import ArrowBackIosRoundedIcon from '@mui/icons-material/ArrowBackIosRounded';
 import FileUploadRoundedIcon from '@mui/icons-material/FileUploadRounded';
 import TuneRoundedIcon from '@mui/icons-material/TuneRounded';
 import DownloadRoundedIcon from '@mui/icons-material/DownloadRounded';
@@ -13,8 +15,15 @@ import background from "../../images/megafy_background1.png"
 import styles from './styles';
 import { Container, Typography } from '@mui/material';
 
-function Home() {
+import { useNavigate } from "react-router-dom";
+
+function Download() {
   const classes = styles;
+  let navigate = useNavigate();
+
+  const backPage = () => {
+    navigate("/edit");
+  }
 
   return (
     <div style={{ backgroundImage: `url(${background})`, overflow: "hidden" }}>
@@ -23,19 +32,19 @@ function Home() {
           <Box sx={classes.uploadButton} >
             <FileUploadRoundedIcon sx={classes.pageIcon}></FileUploadRoundedIcon>
           </Box>
-          <Box sx={classes.disabledButton} >
+          <Box sx={classes.editButton} >
             <TuneRoundedIcon sx={classes.pageIcon}></TuneRoundedIcon>
           </Box> 
-          <Box sx={classes.disabledButton} >
+          <Box sx={classes.downloadButton} >
             <DownloadRoundedIcon sx={classes.pageIcon}></DownloadRoundedIcon>
           </Box>
         </Container>
         
-        <Typography variant="h4" sx={classes.title}>Upload MP4 Files</Typography>
+        <Typography variant="h4" sx={classes.title}>Download</Typography>
         
-
-
-        <ArrowForwardIosRoundedIcon sx={classes.next}></ArrowForwardIosRoundedIcon>
+        <IconButton onClick={backPage} color="default">
+          <ArrowBackIosRoundedIcon sx={classes.back} ></ArrowBackIosRoundedIcon>
+        </IconButton>
         
       </Box>
 
@@ -43,4 +52,4 @@ function Home() {
   )
 }
 
-export default Home;
+export default Download;

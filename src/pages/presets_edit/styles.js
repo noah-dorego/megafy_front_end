@@ -111,11 +111,18 @@ const styles = {
     },
     next: {
         position: "fixed",
-        bottom: "50vh",
+        bottom: "49vh",
         right: "5vw",
         height: "3vw",
         width: "3vw",
-    }
+    },
+    back: {
+        position: "fixed",
+        bottom: "49vh",
+        left: "5vw",
+        height: "3vw",
+        width: "3vw",
+    },
 };
 
 export default styles;

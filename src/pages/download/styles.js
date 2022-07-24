@@ -23,6 +23,15 @@ const styles = {
         borderRadius: "10px",
         background: "linear-gradient(315deg, #E7A627 0%, rgba(131, 30, 30, 0) 100%), #FACC72",
     },
+    downloadButton: {
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        width: "90px",
+        height: "90px",
+        borderRadius: "10px",
+        background: "linear-gradient(315deg, #1B9F1A 0%, rgba(27, 159, 26, 0) 100%), #8EE98D",
+    },
     pageIcon: {
         height: "80px",
         width: "80px",
@@ -111,11 +120,18 @@ const styles = {
     },
     next: {
         position: "fixed",
-        bottom: "50vh",
+        bottom: "49vh",
         right: "5vw",
         height: "3vw",
         width: "3vw",
-    }
+    },
+    back: {
+        position: "fixed",
+        bottom: "49vh",
+        left: "5vw",
+        height: "3vw",
+        width: "3vw",
+    },
 };
 
 export default styles;
