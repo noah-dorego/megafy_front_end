@@ -129,11 +129,21 @@ const styles = {
         right: "0",
         margin: "auto",
         height: "60vh",
-        width: "30vw",
+        width: "400px",
         background: "#FFFFFF",
         borderRadius: "15px",
         boxShadow: "3",
-    }
+    },
+    uploadConfirm: {
+        position: "absolute",
+        bottom: "0",
+        width: "100%",
+        textTransform: "none",
+        fontSize: 20,
+    },
+    uploadConfirmIcon: {
+        fontSize: 20,
+    },
 };
 
 export default styles;

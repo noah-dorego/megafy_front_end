@@ -47,7 +47,7 @@ function Upload() {
         <Typography variant="h4" sx={classes.title}>Upload</Typography>
 
         <Box sx={classes.uploadBox}>
-          
+          <Button sx={classes.uploadConfirm} size="large" variant='contained' color='success' disableElevation>Upload</Button>
         </Box>
 
 
