@@ -30,13 +30,13 @@ function Home() {
     <div style={{ backgroundImage: `url(${background})`, overflow: "hidden" }}>
       <Box sx={classes.mainBox}>
         <Container sx={classes.buttonContainer}>
-          <Box sx={classes.disabledButton} >
+          <Box sx={classes.uploadButton} >
             <FileUploadRoundedIcon sx={classes.pageIcon}></FileUploadRoundedIcon>
           </Box>
-          <Box sx={classes.disabledButton} >
+          <Box sx={classes.editButton} >
             <TuneRoundedIcon sx={classes.pageIcon}></TuneRoundedIcon>
           </Box>
-          <Box sx={classes.disabledButton} >
+          <Box sx={classes.downloadButton} >
             <DownloadRoundedIcon sx={classes.pageIcon}></DownloadRoundedIcon>
           </Box>
         </Container>

@@ -165,7 +165,7 @@ export default function Appbar() {
       <AppBar position="static" sx={myStyles.header}>
         <Toolbar>
           <Box sx={myStyles.logoBox} >
-          <img src={logo} />
+            <img src={logo} />
           </Box>
           <Typography
             variant="h5"
@@ -196,9 +196,7 @@ export default function Appbar() {
               onClick={handleProfileMenuOpen}
               color="inherit"
             >
-              <Badge badgeContent={2} color="error">
-                <FavoriteIcon />
-              </Badge>
+              <FavoriteIcon />
             </IconButton>
           </Box>
           <Box sx={{ display: { xs: 'flex', md: 'none' } }}>

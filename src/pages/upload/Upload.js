@@ -38,14 +38,19 @@ function Upload() {
           </Box>
           <Box sx={classes.disabledButton} >
             <TuneRoundedIcon sx={classes.pageIcon}></TuneRoundedIcon>
-          </Box> 
+          </Box>
           <Box sx={classes.disabledButton} >
             <DownloadRoundedIcon sx={classes.pageIcon}></DownloadRoundedIcon>
           </Box>
         </Container>
-        
+
         <Typography variant="h4" sx={classes.title}>Upload</Typography>
-        
+
+        <Box sx={classes.uploadBox}>
+          
+        </Box>
+
+
         <IconButton onClick={backPage} color="default">
           <ArrowBackIosRoundedIcon sx={classes.back} ></ArrowBackIosRoundedIcon>
         </IconButton>
@@ -53,7 +58,7 @@ function Upload() {
         <IconButton onClick={nextPage} color="default">
           <ArrowForwardIosRoundedIcon sx={classes.next} ></ArrowForwardIosRoundedIcon>
         </IconButton>
-        
+
       </Box>
 
     </div>

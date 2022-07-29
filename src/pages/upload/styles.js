@@ -123,6 +123,17 @@ const styles = {
         height: "3vw",
         width: "3vw",
     },
+    uploadBox: {
+        position: "fixed",
+        left: "0",
+        right: "0",
+        margin: "auto",
+        height: "60vh",
+        width: "30vw",
+        background: "#FFFFFF",
+        borderRadius: "15px",
+        boxShadow: "3",
+    }
 };
 
 export default styles;
