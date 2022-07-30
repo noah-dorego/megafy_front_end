@@ -15,6 +15,12 @@ const logoFont = createTheme({
       "Inter",
       "sans-serif",
     ].join(','),
+    h3: {
+      fontFamily: [
+        'Chakra Petch',
+        'sans-serif',
+      ].join(','),
+    },
     h4: {
       fontFamily: [
         'Chakra Petch',

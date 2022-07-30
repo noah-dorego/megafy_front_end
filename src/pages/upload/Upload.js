@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { useState, useEffect } from 'react';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Paper from '@mui/material/Paper';
@@ -19,6 +20,8 @@ import { useNavigate } from "react-router-dom";
 
 function Upload() {
   const classes = styles;
+  const [audio, setAudio] = useState();
+
   let navigate = useNavigate();
 
   const nextPage = () => {
@@ -28,6 +31,12 @@ function Upload() {
   const backPage = () => {
     navigate("/");
   }
+
+  const addFile = (e) => {
+    if (e.target.files[0]) {
+      setAudio(URL.createObjectURL(e.target.files[0]));
+    }
+  };
 
   return (
     <div style={{ backgroundImage: `url(${background})`, overflow: "hidden" }}>
@@ -47,7 +56,10 @@ function Upload() {
         <Typography variant="h4" sx={classes.title}>Upload</Typography>
 
         <Box sx={classes.uploadBox}>
-          <Button sx={classes.uploadConfirm} size="large" variant='contained' color='success' disableElevation>Upload</Button>
+          <Button sx={classes.uploadConfirm} size="large" variant='contained' component="label" color='success' disableElevation>
+            Upload
+            <input hidden multiple accept="audio/*" type="file" onChange={addFile}/>
+          </Button>
         </Box>
 
 
