@@ -25,6 +25,13 @@ function Download() {
     navigate("/edit");
   }
 
+  const downloadFiles = () => {
+    const link = document.createElement("a");
+    link.download = `download.txt`;
+    link.href = "./download.txt";
+    link.click();
+  }
+
   return (
     <div style={{ backgroundImage: `url(${background})`, overflow: "hidden" }}>
       <Box sx={classes.mainBox}>
@@ -41,6 +48,12 @@ function Download() {
         </Container>
         
         <Typography variant="h4" sx={classes.title}>Download</Typography>
+
+        <Box sx={classes.downloadBox}>
+          <Button sx={classes.downloadConfirm} size="large" variant='contained' component="label" onClick={downloadFiles} disableElevation>
+            Download
+          </Button>
+        </Box>
         
         <IconButton onClick={backPage} color="default">
           <ArrowBackIosRoundedIcon sx={classes.back} ></ArrowBackIosRoundedIcon>

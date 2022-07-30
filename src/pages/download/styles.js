@@ -132,6 +132,26 @@ const styles = {
         height: "3vw",
         width: "3vw",
     },
+    downloadBox: {
+        position: "fixed",
+        left: "0",
+        right: "0",
+        margin: "auto",
+        height: "60vh",
+        width: "400px",
+        background: "#FFFFFF",
+        borderRadius: "37px",
+        boxShadow: "3",
+        background: "linear-gradient(314.95deg, #9F1A1A 0%, #E6A321 77.19%)",
+    },
+    downloadConfirm: {
+        position: "absolute",
+        bottom: "0",
+        width: "100%",
+        textTransform: "none",
+        fontSize: 20,
+        borderRadius: "15px",
+    },
 };
 
 export default styles;
