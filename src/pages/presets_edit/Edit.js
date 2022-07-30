@@ -52,27 +52,29 @@ function Edit() {
                 
 
                 <Container sx={classes.presetContainer}>
-                    <Box sx={classes.beastPreset}>
-                        <CampaignIcon sx={classes.presetIcon}></CampaignIcon>
+                    <Box>
+                        <Box sx={classes.beastPreset}>
+                            <CampaignIcon sx={classes.presetIcon}></CampaignIcon>
+                        </Box>
+                        <Typography variant="h4" sx={classes.presetText}>BEAST</Typography>
                     </Box>
 
-                    <Box sx={classes.slowedPreset}>
-                        <WbTwilightIcon sx={classes.presetIcon}></WbTwilightIcon>
+                    <Box>
+                        <Box sx={classes.slowedPreset}>
+                            <WbTwilightIcon sx={classes.presetIcon}></WbTwilightIcon>
+                        </Box>
+                        <Typography variant="h4" sx={classes.presetText}>Slowed + Reverb</Typography>
                     </Box>
-
-                    <Box sx={classes.vibePreset}>
-                        <WavesIcon sx={classes.presetIcon}></WavesIcon>
+                    
+                    <Box>
+                        <Box sx={classes.vibePreset}>
+                            <WavesIcon sx={classes.presetIcon}></WavesIcon>
+                        </Box>
+                        <Typography variant="h4" sx={classes.presetText}>V I B E S</Typography>
                     </Box>
+                    
                 </Container>
-
-                <Container sx={classes.presetTextContainer}>
-                    <Typography variant="h4">BEAST</Typography>
-
-                    <Typography variant="h4">Slowed + Reverb</Typography>
-
-                    <Typography variant="h4">V I B E S</Typography>
-                </Container>
-
+                    
                 <IconButton onClick={backPage} color="default">
                     <ArrowBackIosRoundedIcon sx={classes.back} ></ArrowBackIosRoundedIcon>
                 </IconButton>

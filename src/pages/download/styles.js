@@ -152,6 +152,24 @@ const styles = {
         fontSize: 20,
         borderRadius: "15px",
     },
+    logo: {
+        position: "absolute",
+        top: "10%",
+        left: "0",
+        right: "0",
+        margin: "auto",
+        width: "15vw",
+        height: "15vw",
+        fontSize: 20,
+        borderRadius: "15px",
+    },
+    numSongsText: {
+        position: "absolute",
+        textAlign: "center",
+        width: "100%",
+        bottom: "25%",
+        margin: "auto",
+    },
 };
 
 export default styles;

@@ -10,7 +10,8 @@ import FileUploadRoundedIcon from '@mui/icons-material/FileUploadRounded';
 import TuneRoundedIcon from '@mui/icons-material/TuneRounded';
 import DownloadRoundedIcon from '@mui/icons-material/DownloadRounded';
 
-import background from "../../images/megafy_background1.png"
+import background from "../../images/megafy_background1.png";
+import logo from "../../images/logo_dark.png";
 
 import styles from './styles';
 import { Container, Typography } from '@mui/material';
@@ -50,9 +51,11 @@ function Download() {
         <Typography variant="h4" sx={classes.title}>Download</Typography>
 
         <Box sx={classes.downloadBox}>
+          <Box component="img" sx={classes.logo} src={logo} alt="Logo"/>
           <Button sx={classes.downloadConfirm} size="large" variant='contained' component="label" onClick={downloadFiles} disableElevation>
             Download
           </Button>
+          <Typography variant="h4" sx={classes.numSongsText}>__ songs</Typography>
         </Box>
         
         <IconButton onClick={backPage} color="default">
